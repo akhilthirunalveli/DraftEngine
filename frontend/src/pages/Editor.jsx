@@ -4,12 +4,18 @@ import SlideView from "../components/editor/SlideView";
 import PresentationSettings from "../components/editor/PresentationSettings";
 import DocumentSettings from "../components/editor/DocumentSettings";
 import useProject from "../hooks/useProject";
+import { SyncLoader } from "react-spinners";
 
 const Editor = () => {
   const { id } = useParams();
   const { p, l, e, setP } = useProject(id);
 
-  if (l) return <div className="text-center mt-20">Loading</div>;
+  if (l)
+    return (
+      <div className="text-center mt-20">
+        <SyncLoader />
+      </div>
+    );
   if (e) return <div className="text-center mt-20 text-red-500">Error</div>;
   if (!p) return null;
 
@@ -21,9 +27,9 @@ const Editor = () => {
   );
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden">
-      <div className="flex-1 flex overflow-hidden gap-10">
-        <div className="flex-1 overflow-auto bg-transparent relative scrollbar-hide">
+    <div className="min-h-screen flex flex-col">
+      <div className="flex-1 flex gap-5">
+        <div className="flex-1 bg-transparent relative">
           {isSlide ? (
             <SlideView d={p.data} pid={p.id} title={p.title} u={(d) => setP({ ...p, data: d })} />
           ) : (

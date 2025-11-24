@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { projAPI } from "../api/endpoints";
 import ProjectCard from "../components/dashboard/ProjectCard";
+import { SyncLoader } from "react-spinners";
 
 const Dashboard = () => {
   const [p, setP] = useState([]);
@@ -50,8 +51,10 @@ const Dashboard = () => {
         </div>
 
         {l ? (
-          <div className="text-center py-12 text-gray-500">Loading Project</div>
-          ) : (
+          <div className="text-center py-12 text-gray-500">
+            <SyncLoader />
+          </div>
+        ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-2">
             {p.map((proj) => (
               <ProjectCard key={proj.id || proj._id} p={proj} onDelete={handleDelete} deletingId={deletingId} />

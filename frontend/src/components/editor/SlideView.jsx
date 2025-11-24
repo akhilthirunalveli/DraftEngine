@@ -25,7 +25,7 @@ const SlideView = ({ d, pid, u }) => {
 
   return (
     <div className="">
-      <div className="min-h-full flex flex-col items-center gap-8">
+      <div className="min-h-full flex flex-col items-center gap-5">
         {/* Main Slide Area */}
         <div className="w-full max-w-6xl">
         <div className="bg-white border-2 border-black rounded-lg p-12 aspect-video flex flex-col items-center justify-center relative">
@@ -70,7 +70,7 @@ const SlideView = ({ d, pid, u }) => {
               <div
                 key={s.id || i}
                 onClick={() => setIdx(i)}
-                className={`min-w-[180px] cursor-pointer p-4 rounded-lg border-2 transition-all ${
+                className={`min-w-[150px] cursor-pointer p-3 rounded-lg border-2 transition-all ${
                   i === idx
                     ? "bg-white border-black shadow-md"
                     : "bg-white border-gray-300 hover:border-gray-400"

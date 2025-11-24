@@ -178,7 +178,7 @@ const PresentationSettings = ({ d, u, pid, title }) => {
   };
 
   return (
-    <div className="w-96 bg-white h-full-screen flex flex-col border-2 border-black p-4 overflow-hidden rounded-xl">
+    <div className="w-96 flex-shrink-0 bg-white h-full-screen flex flex-col border-2 border-black p-4 overflow-hidden rounded-xl">
       <h3 className="font-black text-2xl text-black mb-4 uppercase tracking-tight">Presentation Settings</h3>
 
       <button
