@@ -7,6 +7,5 @@ __pycache__/
 backend/app/core/serviceAccountKey.json
 frontend/package-lock.json
 frontend/postcss.config.cjs
-frontend/src/firebase.js
 frontend/vite.config.js
 frontend/dist
