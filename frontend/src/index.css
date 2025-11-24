@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,500;1,500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global overrides and utility classes */
+html, body, #root {
+	height: 100%;
+}
+
+body {
+	background-color: #fbeee0;
+	@apply text-slate-900 antialiased;
+	font-family: 'Stack Sans Notch', Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Enforce ExtraLight (200) across the app */
+*, *::before, *::after {
+	font-weight: 400 !important;
+}
+
+.app-container {
+	@apply mx-auto px-2 sm:px-6 lg:px-8;
+}
+
+.card {
+	@apply bg-white shadow-lg rounded-lg p-6 border border-slate-200;
+}
+
+.muted {
+	@apply text-slate-500;
+}
+
+.hero-title {
+	@apply text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900;
+}
+
+.btn-primary {
+	@apply bg-blue-600 text-white px-4 py-2 rounded-md shadow hover:bg-blue-700;
+}
+
+.btn-ghost {
+	@apply bg-transparent border border-slate-200 text-slate-700 px-3 py-1 rounded-md hover:bg-slate-50;
+}
+
+/* Button 74 Styles */
+.button-74 {
+	background-color: #fbeee0;
+	border: 2px solid #000000;
+	border-radius: 30px;
+	box-shadow: #422800 4px 4px 0 0;
+	color: #000000;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 18px;
+	padding: 0 18px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.button-74:hover {
+	background-color: #fff;
+}
+
+.button-74:active {
+	box-shadow: #422800 2px 2px 0 0;
+	transform: translate(2px, 2px);
+}
+
+/* Navbar variant - smaller size */
+.button-74-navbar {
+	background-color: #fbeee0;
+	border: 2px solid #000000;
+	border-radius: 20px;
+	box-shadow: #3c3c3c 3px 3px 0 0;
+	color: #000000;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 14px;
+	padding: 0 14px;
+	line-height: 36px;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.button-74-navbar:hover {
+	background-color: #fff;
+}
+
+.button-74-navbar:active {
+	box-shadow: #422800 2px 2px 0 0;
+	transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+	.button-74 {
+		min-width: 120px;
+		padding: 0 25px;
+	}
+	
+	.button-74-navbar {
+		min-width: 100px;
+		padding: 0 18px;
+		font-size: 15px;
+		line-height: 38px;
+	}
+}
+
+/* Hide scrollbar but keep scrolling functionality */
+.scrollbar-hide {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Global scrollbar styling */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #000 transparent;
+}
+
+*::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+	background: transparent;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #000;
+	border-radius: 9999px;
+	border: none;
+}
+
+/* Small responsive tweaks */
+@media (min-width: 768px) {
+	.card { @apply p-8; }
+}
