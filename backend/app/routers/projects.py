@@ -53,15 +53,3 @@ def get_one(pid: str, uid: str = Depends(get_user)):
     data = d.to_dict()
     if data["user_id"] != uid: raise HTTPException(403)
     return data
-
-@r.delete("/{pid}", status_code=204)
-async def delete_project(pid: str, uid: str = Depends(get_user)):
-    doc_ref = db.collection("projects").document(pid)
-    d = doc_ref.get()
-    if not d.exists:
-        raise HTTPException(404, "Project not found")
-    data = d.to_dict()
-    if data["user_id"] != uid:
-        raise HTTPException(403, "You do not have permission to delete this project")
-    doc_ref.delete()
-    return None
