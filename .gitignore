@@ -5,7 +5,4 @@ __pycache__/
 .DS_Store
 # Specific files to ignore
 backend/app/core/serviceAccountKey.json
-frontend/package-lock.json
-frontend/postcss.config.cjs
-frontend/vite.config.js
 frontend/dist
