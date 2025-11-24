@@ -50,14 +50,7 @@ const Dashboard = () => {
         </div>
 
         {l ? (
-          <div className="text-center py-12 text-gray-500">Loading projects...</div>
-        ) : p.length === 0 ? (
-          <div className="text-center py-20 bg-white rounded-lg border border-dashed">
-            <h3 className="text-xl text-gray-400 font-medium mb-4">No projects yet</h3>
-            <Link to="/" className="text-blue-600 hover:underline">
-              Create your first draft
-            </Link>
-          </div>
+          <div className="text-center py-12 text-gray-500">Loading Project</div>
           ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-2">
             {p.map((proj) => (

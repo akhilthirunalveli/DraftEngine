@@ -9,7 +9,7 @@ const Editor = () => {
   const { id } = useParams();
   const { p, l, e, setP } = useProject(id);
 
-  if (l) return <div className="text-center mt-20">Loading...</div>;
+  if (l) return <div className="text-center mt-20">Loading</div>;
   if (e) return <div className="text-center mt-20 text-red-500">Error</div>;
   if (!p) return null;
 

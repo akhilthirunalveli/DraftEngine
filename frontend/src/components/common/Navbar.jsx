@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className="text-black p-4 flex justify-between items-center ">
-      <Link to="/" className="text-3xl font-bold text-black" style={{ fontFamily: "'MuseoModerno', sans-serif" }}>DraftEngine.</Link>
+      <Link to="/" className="text-3xl font-bold text-black tracking-tight" style={{ fontFamily: "'MuseoModerno', sans-serif" }}>DraftEngine.</Link>
       <div className="flex gap-4 items-center">
         {user ? (
           <>
